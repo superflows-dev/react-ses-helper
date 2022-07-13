@@ -49,5 +49,15 @@
   },
   "files": [
     "dist"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.1171.0"
+  },
+  "keywords": [
+    "react",
+    "aws",
+    "emailer",
+    "ses",
+    "simple email service"
   ]
 }

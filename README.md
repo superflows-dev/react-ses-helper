@@ -10,19 +10,49 @@
 npm install --save react-ses-helper
 ```
 
+## Dependencies
+
+```bash
+npm install --save aws-sdk
+```
+
+## Note
+
+###AWS key pair needs to have SES privileges
+
+
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
+import * as SesHelper from 'react-ses-helper'
 
-import MyComponent from 'react-ses-helper'
-import 'react-ses-helper/dist/index.css'
+const App = () => {
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+  useEffect(() => {
+    async function sendEmail() {
+      
+      SesHelper.sendEmail("aws_region", "aws_secret", "aws_key", "Test Subject", "supe*******@**ail.com", ["hrus*******@**ail.com"], [], "HTML Body", "Text Body", [])
+  
+    }
+    sendEmail();
+  }, [])
+
+  useEffect(() => {
+    async function sendTemplatedEmail() {
+      
+      SesHelper.sendTemplatedEmail("aws_region", "aws_secret", "aws_key", "su******@***il.com", ["hr*******ndale@**ail.com"], [], "TemplateOtp1", "{\"project\": \"superflows\", \"name\": \"Hrushikesh\", \"otp\": \"1313\"}", [])
+  
+    }
+    sendTemplatedEmail();
+  }, [])
+
+  return <div>Hello SES Helper</div>
+
 }
+
+export default App
+
 ```
 
 ## License
