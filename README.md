@@ -18,7 +18,8 @@ npm install --save aws-sdk
 
 ## Note
 
-###AWS key pair needs to have SES privileges
+### AWS key pair needs to have SES privileges
+### AWS should have an SES template configured that accepts data as shown in the example below
 
 
 ## Usage
