@@ -9,18 +9,32 @@
 ```bash
 npm install --save react-ses-helper
 ```
+Then install the dependencies.
+
 
 ## Dependencies
 
 ```bash
 npm install --save aws-sdk
 ```
+Then review the AWS configuration
 
-## Note
+## Configuration
 
-AWS key pair needs to have SES privileges
-AWS should have an SES template configured that accepts data as shown in the example below  
-    
+### AWS SES Sender Receiver
+
+The sender (source) email address should be configured and verified. If SES is in sandbox mode, the receiver email address(es) should also be configured and verified. A test email should be sent from the SES console and ensured that the intended receiver receives it.
+
+### AWS SES Template
+
+This is required if you are planning to send templated emails. An html template should be created. As of July 22, SES console does not support adding email templates. They can only be done through the apis. Best way is to do it via aws command line interface.
+
+### AWS Credentials
+
+AWS region, secret and access key form the credentials. These are required to use package. It is crucial that these credentials are given the SES email sending permissions, otherwise the emails will not be sent.
+
+You can now review the functionality below.
+
 ## Functionality
 
 ```jsx
