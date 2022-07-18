@@ -18,9 +18,35 @@ npm install --save aws-sdk
 
 ## Note
 
-### AWS key pair needs to have SES privileges
-### AWS should have an SES template configured that accepts data as shown in the example below
+AWS key pair needs to have SES privileges
+AWS should have an SES template configured that accepts data as shown in the example below  
+    
+## Functionality
 
+```jsx
+
+/*
+
+region: aws region
+secret: aws secret
+key: aws access key
+subject: subject of email
+source: source email (needs to be configured in aws ses)
+destinationToArr: array of destination emails
+destinationCCArr: array of emails to be cced
+htmlBody: html body
+textBody: text body
+replyToArr: array to reply to email addresses
+template: name of template that is configured in aws ses
+templateData: json string representation of key value pairs that are the template data
+
+*/
+
+sendEmail(region, secret, key, subject, source, destinationToArr, destinationCCArr, htmlBody, textBody, replyToArr) {}
+
+sendTemplatedEmail(region, secret, key, source, destinationToArr, destinationCCArr, templateName, templateData, replyToArr) {}
+
+```
 
 ## Usage
 
