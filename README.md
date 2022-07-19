@@ -31,7 +31,7 @@ This is required if you are planning to send templated emails. An html template 
 
 ### AWS Credentials
 
-AWS region, secret and access key form the credentials. These are required to use package. It is crucial that these credentials are given the SES email sending permissions, otherwise the emails will not be sent.
+AWS region, secret and access key form the credentials. These are required to use this package. It is crucial that these credentials are given the SES email sending permissions, otherwise the emails will not be sent.
 
 You can now review the functionality below.
 
