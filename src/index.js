@@ -9,7 +9,6 @@ function updateAWSConfigAndGetClient(region, secret, key) {
     secretAccessKey: secret,
     accessKeyId: key
   }
-  console.log(configuration);
   AWS.config.update(configuration)
   return new AWS.DynamoDB.DocumentClient();
 
@@ -56,7 +55,6 @@ export const sendEmail = async (region, secret, key, subject, source, destinatio
           sendPromise.then(
             function(data) {
               resolve (data.MessageId);
-              console.log(data.MessageId);
             }).catch(
               function(err) {
               reject(err);
@@ -104,7 +102,6 @@ export const sendTemplatedEmail = async (region, secret, key, source, destinatio
           sendPromise.then(
             function(data) {
               resolve (data.MessageId);
-              console.log(data.MessageId);
             }).catch(
               function(err) {
               reject(err);
