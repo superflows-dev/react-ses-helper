@@ -1,6 +1,6 @@
 {
   "name": "react-ses-helper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A helper library for the Simple Email Service, integrates with AWS SDK",
   "author": "superflows-dev",
   "license": "MIT",
